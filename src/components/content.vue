@@ -90,10 +90,10 @@ export default {
 
 .articleLink {
   min-height: 84px;
-  padding: 30px 20px;
+  padding: 28px 20px 0 ;
   display: block;
   position: relative;
-    border-bottom: 1px solid #ccc;
+
   p {
     line-height: 60px;
     font-size: 42px;
@@ -124,10 +124,12 @@ export default {
     }
   }
   .itemMes {
-    padding: 20px;
+    padding: 20px 0;
+    height: 28px;
+    border-bottom: 1px solid #ccc;
     span {
       padding-right: 20px;
-      line-height: 18px;
+      line-height: 20px;
       float: left;
       color: #ccc;
       font-size: 26px;

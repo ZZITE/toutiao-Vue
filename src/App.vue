@@ -18,7 +18,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less">
 * {
   margin: 0;
   padding: 0;
@@ -36,16 +36,16 @@ export default {
   bottom: 0;
   font-size: 36px;
   background: #ccc;
-}
-.mainLink{
-  height: 8rem;
-}
-.mainLink li {
-  display: inline-block;
-  vertical-align: middle;
-  width:20% ;
-  height: 6rem;
-  line-height: 6rem;
+  .mainLink{
+    height: 8rem;
+    }
+    .mainLink li {
+      display: inline-block;
+      vertical-align: middle;
+      width:20% ;
+      height: 6rem;
+      line-height: 6rem;
+      }
 }
 a {
     text-decoration:none;

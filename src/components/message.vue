@@ -1,12 +1,12 @@
 <template>
-  <div>
-    <p>内容3</p>
-  </div>
+    <div>
+      ssdsddfd
+    </div>
 </template>
 
 <script>
 export default {
-  name: 'content-1',
+  name: 'message',
   data () {
     return {
     }
@@ -16,7 +16,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-p {
-  font-size: 10rem;
-}
 </style>

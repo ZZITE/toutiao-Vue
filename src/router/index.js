@@ -5,7 +5,7 @@ import video from '@/components/video'
 import wei from '@/components/wei'
 import login from '@/components/login'
 import content from '@/components/content'
-import message from '@/components/message'
+import loadmore from '@/components/common/loadmore.vue'
 
 Vue.use(Router)
 
@@ -13,17 +13,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: Hello,
+      component: Hello, 
+      redirect:'/content',
       children: [
         {
           path: '/content',
           name: 'content',
           component: content
-        },
-        {
-          path: '/message',
-          name: 'message',
-          component: message
         }
       ]
     }, {
@@ -38,6 +34,11 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: login
+    },
+    {
+      path: '/common/loadmore',
+      name: 'loadmore',
+      component: loadmore
     }
   ]
 })

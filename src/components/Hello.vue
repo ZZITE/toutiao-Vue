@@ -2,15 +2,12 @@
   <div>
     <div class="tittle">
       <span>今日头条</span>
-      <input class="search" type="text" value="LOL视频|守望先锋|">
+      <input class="search" type="text" :value="searchValue" v-on:click="clearValue" >
     </div>
     <nav class="fl">
-      <ul class="tab-head">
-        <li><router-link to="/content">内容1</router-link></li>
-        <li><router-link to="/content">内容2</router-link></li>
-        <li><router-link to="/content">内容3</router-link></li>
-        <li><router-link to="/content">内容4</router-link></li>
-      </ul>
+      <div class="menu">
+        <router-link class="a" v-for="(item, idx) in title" :key="item" to="/content">{{item}}</router-link>
+      </div>
     </nav>
 <router-view></router-view>
   </div>
@@ -21,7 +18,13 @@ export default {
   name: 'hello',
   data () {
     return {
-      
+      title: ['推荐','热点','厦门','视频','社会','图片','娱乐','问答','科技','汽车','财经','军事','体育','段子','小说','特卖','健康','趣图','美女','房产','国际','问答'],
+      searchValue: '迪丽热巴'
+    }
+  },
+  methods: {
+    clearValue:function() {
+      this.searchValue = '';  
     }
   }
 }
@@ -57,14 +60,30 @@ export default {
 }
 .fl {
   margin-top: 8rem;
-  line-height: 4rem;
+  height: 90px;
   border-bottom: 1px solid #ccc;
+  background: #f4f5f6;
+  box-sizing: border-box;
+}
+.menu {
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.a {
+  //color: #f85959;
+  margin: 10px 0 10px 10px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 40px;
+  padding: 0 20px;
+  display: inline-block;
 }
 
 
 .tab-head li {
   display: inline;
-  margin-left: 2rem;
+  margin-right: 2rem;
   overflow: hidden;
 }
 a {

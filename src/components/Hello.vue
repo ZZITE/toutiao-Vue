@@ -5,6 +5,12 @@
       <input class="search" type="text" :value="searchValue" v-on:click="clearValue" >
     </div>
     <nav class="fl">
+      <div class="more">
+        <div class="shadow"></div>
+        <router-link class="moreBtn" to="/menuMore">
+        <span class="cross"></span>
+        </router-link>
+      </div>
       <div class="menu">
         <router-link class="a" v-for="(item, idx) in title" :key="item" to="/content">{{item}}</router-link>
       </div>
@@ -79,6 +85,47 @@ export default {
   padding: 0 20px;
   display: inline-block;
 }
+.more {
+  float: right;
+  position: relative;
+}
+.shadow {
+  left: -20px;
+  height: 90px;
+  width: 20px;
+  position: absolute;
+  background: url(./../assets/more.png);
+  background-size: contain;
+  background-color: rgba(244,245,246,.3);
+}
+.moreBtn {
+  background-size: 40px;
+  height: 90px;
+  width: 80px;
+  display: block;
+  position: relative;
+  color: #f85959;
+  text-align: center;
+}
+.cross {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  opacity: .9;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.cross:before {
+  transform: rotate(90deg);
+}
+.cross:after, .cross:before {
+    position: absolute;
+    content: " ";
+    height: 46px;
+    width: 5px;
+    background-color: #f85959;
+}
 
 
 .tab-head li {
@@ -89,6 +136,7 @@ export default {
 a {
   font-size: 2.8rem;
   color: #000;
+  text-decoration: none;
 }
 
 </style>

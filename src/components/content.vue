@@ -10,7 +10,7 @@
         <div slot="top" class="mint-loadmore-top">
             <span v-show="topStatus === 'pull'" :class="{ 'rotate': topStatus === 'drop' }">↓</span>
             <span v-show="topStatus === 'loading'">Loading...</span>
-            <span v-show="topStatus === 'drop'">释放更新</span>
+            <span v-show="topStatus === 'drop'">释放刷新</span>
         </div>
 
     <section v-for="item of items" @click="itemClick(item)">
@@ -62,7 +62,7 @@
       </a>
     </section>
     <div slot="bottom" class="mint-loadmore-bottom">
-      <span v-show="topStatus !== 'loading'" :class="{ 'rotate': topStatus === 'drop' }">更多内容...</span>
+      <span v-show="topStatus !== 'loading'" :class="{ 'rotate': topStatus === 'drop' }">加载更多</span>
     </div>
     </mt-loadmore>
     </div>
@@ -100,14 +100,60 @@ export default {
         bi: true,
         title: '剧情反转？韩国闺蜜门崔顺实之女“坑娘又坑总统” 或被逮捕',
         src: 'http://p3.pstatp.com/large/289d000de4b549adecdd',
-        mes: ['国际','评论18','10分钟前']
+        mes: ['国际','评论18','5分钟前']
         },
         {
         zy: true,
         title: '彻底决裂？绿议员吁民进党与柯文哲分手：他已不值得期待!',
         src: 'https://p3.pstatp.com/list/289800001c1608e6eefb',
-        mes: ['社会','评论233','12分钟前']
-        }],
+        mes: ['社会','评论233','5分钟前']
+        },
+        {
+        title: '喵星人就是你生活不可或缺的小伙伴，你被小萌喵撩到了吗？',
+        src:[
+          'https://p3.pstatp.com/list/2a40000181373e8c9c6c',
+          'https://p3.pstatp.com/list/2a410003336e76cc95b2',
+          'https://p3.pstatp.com/list/2a470000dd2ec23cac1c'
+        ],
+        mes: ['萌宠','评论86','10分钟前']
+        },
+        {
+        zy: true,
+        title: '讲述者一名工程师的梦想和励志，程序员你觉得是不是该这样!',
+        src: 'http://p1.pstatp.com/video1609/2a4100026681f82b8170',
+        mes: ['社会','评论23','10分钟前']
+        },
+        {
+        title: '金爵影帝黄渤：“小鲜肉”也能演好戏，当年老演员对我们也“着急”｜专访',
+        src:[
+          'https://p3.pstatp.com/list/289a002088dd9941d6ba',
+          'https://p3.pstatp.com/list/2a3f0004c85c03f257d7',
+          'https://p3.pstatp.com/list/2a47000186450440f3dd'
+        ],
+        mes: ['娱乐','评论121','15分钟前']
+        },
+        {
+        title: '在云南有座蜂巢一般的村寨，上百间房屋顺山势连在一起，在全国也是少见',
+        src:[
+          'https://p3.pstatp.com/list/28960000944a06a6e340',
+          'https://p3.pstatp.com/list/2899000244d44233b94a',
+          'https://p3.pstatp.com/list/2a3800001e117954b72e'
+        ],
+        mes: ['旅游','评论31','20分钟前']
+        },
+        {
+        bi: true,
+        title: '最新版高铁来了！直击“复兴号”内部设施',
+        src: 'http://p3.pstatp.com/large/289a002092f1c0edb311',
+        mes: ['热点','评论265','23分钟前']
+        },
+        {
+        zy: true,
+        title: '中方取消两军边境高层会晤，越南该反思了',
+        src: 'https://p3.pstatp.com/list/2a8e0007d0b06667d2bb',
+        mes: ['军事','评论20','30分钟前']
+        }
+      ],
       it2: [
         {
         title: '一只胖到五官都挤在一起的柴犬，总露出迷之微笑，可能不是正经汪',
@@ -115,7 +161,7 @@ export default {
         'https://p3.pstatp.com/list/2a3700007effc87b0af1',
         'https://p3.pstatp.com/list/2a360000e9bc3e3ea585'
         ],
-        mes: ['萌宠','评论383','15分钟前']
+        mes: ['萌宠','评论383','刚刚']
         },
         {
         title: '运存512MB也能无比流畅？安卓Go来了',
@@ -123,7 +169,7 @@ export default {
         'https://p3.pstatp.com/list/26ed00030775f2deee99',
         'https://p3.pstatp.com/list/26e80003c4fb35b22290'
         ],
-        mes: ['科技','评论41','17分钟前']
+        mes: ['科技','评论41','1分钟前']
         },
         {
         title: '你们这样对共享单车，你们的良心不会痛吗？',
@@ -131,8 +177,58 @@ export default {
         'https://p3.pstatp.com/list/2a3e00040ecb290e5623',
         'https://p3.pstatp.com/list/2a3a0003a17b70163aa6'
         ],
-        mes: ['科技','评论18','20分钟前']
-        }],
+        mes: ['科技','评论18','1分钟前']
+        },
+        {
+        zy: true,
+        title: '超脑48小时：程序员随便动动指头就能拯救了整个世界',
+        src: 'http://p1.pstatp.com/video1609/2ae500065d8fca7d0730',
+        mes: ['影视','评论10','2分钟前']
+        },
+        {
+        title: '四川茂县垮塌现场或有二次滑坡 救援人员紧急撤离',
+        src: ['https://p3.pstatp.com/list/2a8b000e16b6a791e2a6',
+        'https://p3.pstatp.com/list/2a8c00081de15ad22810',
+        'https://p3.pstatp.com/list/2a89000e68fbee9a738d'
+        ],
+        mes: ['热点','评论425','5分钟前']
+        },
+        {
+        bi: true,
+        title: '最新版高铁来了！直击“复兴号”内部设施',
+        src: 'http://p3.pstatp.com/large/289a002092f1c0edb311',
+        mes: ['热点','评论265','7分钟前']
+        },
+        {
+        zy: true,
+        title: '中方取消两军边境高层会晤，越南该反思了',
+        src: 'https://p3.pstatp.com/list/2a8e0007d0b06667d2bb',
+        mes: ['军事','评论20','7分钟前']
+        },
+        {
+        title: '超盖茨！坐拥5878亿：他将是世界最有钱人',
+        src: ['https://p3.pstatp.com/list/2a8b000d20354b170b8a',
+        'https://p3.pstatp.com/list/2a8e00065d5203ac2294',
+        'https://p3.pstatp.com/list/2a8e00065d53954fdb06'
+        ],
+        mes: ['财经','评论21','10分钟前']
+        },
+        {
+        title: '中国055驱逐舰为何引起美俄关注？能携6种128导弹打遍全球',
+        src: [
+        'https://p3.pstatp.com/list/2a410002f2e03f155bcf',
+        'https://p3.pstatp.com/list/2a40000141c26e6f2bcf',
+        'https://p3.pstatp.com/list/2a420002852978d1dd6f'
+        ],
+        mes: ['军事','评论51','12分钟前']
+        },
+        {
+        zy: true,
+        title: '把百度挤出BAT，京东只差1%',
+        src: 'https://p3.pstatp.com/list/2a8a000c4a5bc619226c',
+        mes: ['财经','评论14','15分钟前']
+        }
+      ],
       it3: [
         {
         zy: true,
@@ -161,6 +257,42 @@ export default {
         title: '刘亦菲晒一字马美照，多年舞蹈功底和好身材暴露无遗，演小龙女曾获李若彤连称赞',
         src: 'http://p1.pstatp.com/large/289a001d54e2bf297361',
         mes: ['娱乐','评论63','3小时前']
+        },
+        {
+        title: '挑起难民争议，有意义吗？',
+        src: [
+        'https://p3.pstatp.com/list/2a42000441d2d2e5cb8f',
+        'https://p3.pstatp.com/list/2a4700025784dde12a8b',
+        'https://p3.pstatp.com/list/2a480000d2ad6d6eeaf9'
+        ],
+        mes: ['国际','评论21','3小时前']
+        },
+        {
+        zy: true,
+        title: '冰桶挑战3周年：筹得上亿美元 挑战发起人无钱治病',
+        src: 'https://p3.pstatp.com/list/2a8d00063e6ea8ea299c',
+        mes: ['热点','评论230','4小时前']
+        },
+        {
+        title: '可可西里连续8年无藏羚羊盗猎案 目前已达到6万多只',
+        src: [
+        'https://p3.pstatp.com/list/2a8e00083480ea46758b',
+        'https://p3.pstatp.com/list/2a8c0008fcfc643d1fb7',
+        'https://p3.pstatp.com/list/2a8c0008fcfde782209f'
+        ],
+        mes: ['社会','评论11','5小时前']
+        },
+        {
+        bi: true,
+        title: '喜马拉雅山观景缆车坠落致7死',
+        src: 'http://p1.pstatp.com/large/289a00202cd7459f542c',
+        mes: ['社会','评论25','6小时前']
+        },
+        {
+        zy: true,
+        title: '世界和平论坛丨伊朗最高领袖顾问：面对恐怖主义我们绝不沉默',
+        src: 'https://p3.pstatp.com/list/2a88000ddc838191f822',
+        mes: ['国际','评论130','7小时前']
         }
       ],
       allLoaded: false,
@@ -175,7 +307,7 @@ export default {
         var i = 0, len = self.it2.length;
         self.items.splice(0,self.items.length);
         for (; i < len; i ++) {
-          self.items.unshift(self.it2[i]);
+          self.items.push(self.it2[i]);
         }
         self.$refs.loadmore.onTopLoaded();
       }, 500);
@@ -225,7 +357,7 @@ white-space: nowrap; //文本不换行，这样超出一行的部分被截取，
 
   .itemDetail {
     border-bottom: 1px solid #ccc;
-    padding: 0 20px;
+    margin: 0 20px;
       p {
       line-height: 60px;
       font-size: 42px;
@@ -237,11 +369,6 @@ white-space: nowrap; //文本不换行，这样超出一行的部分被截取，
     */
       }
   }
-
-
-
-
-
   .itemTitle2{  
     width: 64%;
     display: inline-block;
@@ -260,8 +387,6 @@ white-space: nowrap; //文本不换行，这样超出一行的部分被截取，
     width: 100%;
     }
   }
-
-
   .itemImage3 {
     display: inline-block;
     vertical-align: middle;
@@ -273,11 +398,6 @@ white-space: nowrap; //文本不换行，这样超出一行的部分被截取，
     margin-bottom: 6px;
     }
   }
-
-
-
-
-
   .itemImage {
     margin-top: 6px;
     display: block;

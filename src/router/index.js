@@ -5,7 +5,7 @@ import video from '@/components/video'
 import wei from '@/components/wei'
 import login from '@/components/login'
 import content from '@/components/content'
-import loadmore from '@/components/common/loadmore.vue'
+import menuMore from '@/components/menuMore'
 
 Vue.use(Router)
 
@@ -36,9 +36,9 @@ export default new Router({
       component: login
     },
     {
-      path: '/common/loadmore',
-      name: 'loadmore',
-      component: loadmore
+      path: '/menuMore',
+      name: 'more',
+      component: menuMore
     }
   ]
 })

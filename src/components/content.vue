@@ -1,15 +1,21 @@
 <template>
-<!--
-<scroller 
-  :on-refresh="refresh"
-  :on-infinite="infinite">
 
--->
+
 
   <div class="wrap" >
-    <section v-for="item of items" >
+
+ <mt-loadmore :top-method="loadTop" :bottom-method="loadBottom" :bottom-all-loaded="allLoaded" :max-distance="150"
+                 @top-status-change="handleTopChange" ref="loadmore">
+
+        <div slot="top" class="mint-loadmore-top">
+            <span v-show="topStatus === 'pull'" :class="{ 'rotate': topStatus === 'drop' }">↓</span>
+            <span v-show="topStatus === 'loading'">Loading...</span>
+            <span v-show="topStatus === 'drop'">释放更新</span>
+        </div>
+
+    <section v-for="item of items" @click="itemClick(item)">
       <!--左侧标题，右侧单图-->
-      <a class="articleLink" v-if="item.lr">
+      <a class="articleLink" v-if="item.zy">
         <div class="itemDetail">
           <div class="itemTitle2">            
             <p>{{item.title}}</p>
@@ -55,14 +61,18 @@
         </div>
       </a>
     </section>
+    <div slot="bottom" class="mint-loadmore-bottom">
+      <span v-show="topStatus !== 'loading'" :class="{ 'rotate': topStatus === 'drop' }">更多内容...</span>
     </div>
-   <!-- </scroller>  -->
+    </mt-loadmore>
+    </div>
+
 </template>
 
 <script>
 import Vue from 'vue'
-import VueScroller from 'vue-scroller'
-Vue.use(VueScroller)
+import { Loadmore } from 'mint-ui';
+Vue.component(Loadmore.name, Loadmore);
 
 export default {
   name: 'content',
@@ -71,9 +81,10 @@ export default {
       items: [
         {
         title: '小奶喵卡住出不来，看到主人在拍摄，于是，喵：好尴尬哦，卖个萌好了',
-        src:['https://p3.pstatp.com/list/289100046793e88f5e5a',
-        'https://p3.pstatp.com/list/28900004face553ab585',
-        'https://p3.pstatp.com/list/28920000dd2b2bc4dc8b'
+        src:[
+          'https://p3.pstatp.com/list/289100046793e88f5e5a',
+          'https://p3.pstatp.com/list/28900004face553ab585',
+          'https://p3.pstatp.com/list/28920000dd2b2bc4dc8b'
         ],
         mes: ['萌宠','评论4396','刚刚']
         },
@@ -92,11 +103,12 @@ export default {
         mes: ['国际','评论18','10分钟前']
         },
         {
-        lr: true,
+        zy: true,
         title: '彻底决裂？绿议员吁民进党与柯文哲分手：他已不值得期待!',
         src: 'https://p3.pstatp.com/list/289800001c1608e6eefb',
         mes: ['社会','评论233','12分钟前']
-        },
+        }],
+      it2: [
         {
         title: '一只胖到五官都挤在一起的柴犬，总露出迷之微笑，可能不是正经汪',
         src: ['https://p3.pstatp.com/list/28980002c953c55f7347',
@@ -120,9 +132,10 @@ export default {
         'https://p3.pstatp.com/list/2a3a0003a17b70163aa6'
         ],
         mes: ['科技','评论18','20分钟前']
-        },
+        }],
+      it3: [
         {
-        lr: true,
+        zy: true,
         title: '超级中国：能靠吃征服世界的民族，欧美人眼中的亚洲吃货',
         src: 'https://p3.pstatp.com/list/2a3e000211415ed44798',
         mes: ['美食','评论40','1小时前']
@@ -149,7 +162,41 @@ export default {
         src: 'http://p1.pstatp.com/large/289a001d54e2bf297361',
         mes: ['娱乐','评论63','3小时前']
         }
-      ]
+      ],
+      allLoaded: false,
+      topStatus: '',
+    }
+  },
+
+  methods: {
+    loadTop: function () {  // 刷新数据的操作
+      var self = this;
+      setTimeout(function () {
+        var i = 0, len = self.it2.length;
+        self.items.splice(0,self.items.length);
+        for (; i < len; i ++) {
+          self.items.unshift(self.it2[i]);
+        }
+        self.$refs.loadmore.onTopLoaded();
+      }, 500);
+    },
+    loadBottom: function () { // 加载更多数据的操作
+                //load data
+                //this.allLoaded = true;// 若数据已全部获取完毕
+      var self = this;
+      setTimeout(function () {
+        var i =0, len = self.it3.length;
+        for (; i < len; i ++){
+          self.items.push(self.it3[i]);
+        }
+        self.$refs.loadmore.onBottomLoaded();
+      }, 500);
+    },
+    handleTopChange: function (status) {
+      this.topStatus = status;
+    },
+    itemClick: function (data) {
+      console.log('items click, msg : ' + data);
     }
   }
 }
@@ -166,7 +213,9 @@ white-space: nowrap; //文本不换行，这样超出一行的部分被截取，
 .wrap {
   overflow-y: auto;
   height: 1400px;
-
+  .mint-loadmore-top,.mint-loadmore-bottom span {
+    font-size: 36px;
+  }
 
 .articleLink {
   min-height: 84px;

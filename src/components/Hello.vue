@@ -4,18 +4,8 @@
       <span>今日头条</span>
       <input class="search" type="text" :value="searchValue" v-on:click="clearValue" >
     </div>
-    <nav class="fl">
-      <div class="more">
-        <div class="shadow"></div>
-        <router-link class="moreBtn" to="/menuMore">
-        <span class="cross"></span>
-        </router-link>
-      </div>
-      <div class="menu">
-        <router-link class="a" v-for="(item, idx) in title" :key="item" to="/content">{{item}}</router-link>
-      </div>
-    </nav>
-<router-view></router-view>
+<router-view name="one"></router-view>
+<router-view name="two"></router-view>
   </div>
 </template>
 
@@ -24,7 +14,6 @@ export default {
   name: 'hello',
   data () {
     return {
-      title: ['推荐','热点','厦门','视频','社会','图片','娱乐','问答','科技','汽车','财经','军事','体育','段子','小说','特卖','健康','趣图','美女','房产','国际','问答'],
       searchValue: '迪丽热巴'
     }
   },

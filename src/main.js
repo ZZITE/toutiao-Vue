@@ -5,6 +5,8 @@ import App from './App'
 import router from './router'
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
+import Vuex from 'vuex'
+import store from './../vuex/store'
 
 Vue.config.productionTip = false
 Vue.use(MintUI)
@@ -12,6 +14,7 @@ Vue.use(MintUI)
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: { App }
 })

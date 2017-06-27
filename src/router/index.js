@@ -5,6 +5,7 @@ import video from '@/components/video'
 import wei from '@/components/wei'
 import login from '@/components/login'
 import content from '@/components/content'
+import nav from '@/components/nav'
 import menuMore from '@/components/menuMore'
 
 Vue.use(Router)
@@ -14,12 +15,16 @@ export default new Router({
     {
       path: '/',
       component: Hello, 
-      redirect:'/content',
+      //redirect:'/content',
       children: [
         {
-          path: '/content',
-          name: 'content',
-          component: content
+          path: '/',
+          name: 'Hello',
+          components: {
+            default:Hello,
+            one:nav,
+            two:content
+          }
         }
       ]
     }, {

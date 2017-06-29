@@ -35,17 +35,17 @@ export default {
     position: fixed;
     left: 0;
     top: 0;
-    font-size: 4rem;
+    font-size: 54px;
     span {
-      float:left;
-      margin-left: 2rem;
-      margin-top: 2rem;
+      position: fixed;
+      left: 20px;
+      top: 28px;
       }
     .search {
-      float: left;
+      position: fixed;
       height: 4.4rem;
-      margin-top: 2rem;
-      margin-left: 1.5rem;
+      left: 300px;
+      top: 36px;
       width: 40rem;
       text-align: center;
       border-radius:1rem ;

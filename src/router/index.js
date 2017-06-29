@@ -7,6 +7,7 @@ import login from '@/components/login'
 import content from '@/components/content'
 import nav from '@/components/nav'
 import menuMore from '@/components/menuMore'
+import detail from '@/components/detail'
 
 Vue.use(Router)
 
@@ -44,6 +45,11 @@ export default new Router({
       path: '/menuMore',
       name: 'more',
       component: menuMore
+    },
+    {
+      path: '/detail',
+      name: 'detail',
+      component: detail
     }
   ]
 })

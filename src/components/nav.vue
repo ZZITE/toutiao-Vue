@@ -86,6 +86,7 @@ export default {
   overflow: hidden;
   overflow-x: auto;
   white-space: nowrap;
+  -webkit-overflow-scrolling:touch;
 }
 .a {
   //color: #f85959;

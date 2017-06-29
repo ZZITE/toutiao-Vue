@@ -15,7 +15,7 @@
 
     <section v-for="item of items" :key="item">
       <!--左侧标题，右侧单图-->
-      <a class="articleLink" v-if="item.zy">
+      <a class="articleLink" v-if="item.zy" @click="toDetail">
         <div class="itemDetail">
           <div class="itemTitle2">            
             <p>{{item.title}}</p>
@@ -73,6 +73,7 @@
 import Vue from 'vue'
 import { Loadmore } from 'mint-ui';
 Vue.component(Loadmore.name, Loadmore);
+import { Indicator } from 'mint-ui';
 
 export default {
   name: 'content',
@@ -250,8 +251,18 @@ export default {
     },
     handleTopChange: function (status) {
       this.topStatus = status;
-    }
-  },
+    },
+    toDetail: function() {
+      Indicator.open({
+      text: '加载中...',
+      spinnerType: 'snake'
+    })
+    setTimeout(function() {
+      Indicator.close()
+      //this.$router.push({path:'/detail'})
+    },2000)
+  }
+},
   computed: {
       items () {
         return this.$store.state.items
@@ -269,6 +280,7 @@ text-overflow: ellipsis;
 white-space: nowrap; //文本不换行，这样超出一行的部分被截取，显示...
 }*/
 .wrap {
+  -webkit-overflow-scrolling:touch;
   overflow-y: auto;
   height: 1400px;
   .mint-loadmore-top,.mint-loadmore-bottom span {
@@ -288,7 +300,8 @@ white-space: nowrap; //文本不换行，这样超出一行的部分被截取，
       line-height: 60px;
       font-size: 42px;
       text-align: left;
-      max-height: 100%;
+      max-height: 100%; 
+      color: #222;
     /*overflow:hidden; 
       white-space:nowrap; 
       text-overflow:ellipsis; 
@@ -354,6 +367,12 @@ white-space: nowrap; //文本不换行，这样超出一行的部分被截取，
       color: #999;
       font-size: 26px;
       }
+    }
+  }
+  a {
+    text-decoration: none;
+    a:visited p {
+      color: #aaa;
     }
   }
 }

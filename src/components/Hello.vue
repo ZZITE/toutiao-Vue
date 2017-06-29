@@ -39,12 +39,12 @@ export default {
     span {
       position: fixed;
       left: 20px;
-      top: 28px;
+      top: 30px;
       }
     .search {
       position: fixed;
       height: 4.4rem;
-      left: 300px;
+      left: 290px;
       top: 36px;
       width: 40rem;
       text-align: center;

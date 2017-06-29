@@ -120,6 +120,7 @@ export default {
            line-height: 2em;
            text-decoration: none;
            color: #131313;
+           text-align: center;
          }
       }
     }

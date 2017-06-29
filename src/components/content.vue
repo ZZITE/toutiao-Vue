@@ -30,7 +30,7 @@
       </a>
 
       <!--标题+大图-->
-      <a class="articleLink" v-else-if="item.bi"> 
+      <a class="articleLink" v-else-if="item.bi" @click="toDetail"> 
         <div class="itemDetail">
           <div class="itemTitle3 ">            
             <p>{{item.title}}</p>
@@ -45,7 +45,7 @@
       </a>
 
       <!--标题+三图-->
-      <a class="articleLink" v-else> 
+      <a class="articleLink" v-else @click="toDetail"> 
         <div class="itemDetail">
           <div class="itemTitle ">            
             <p>{{item.title}}</p>
@@ -253,14 +253,15 @@ export default {
       this.topStatus = status;
     },
     toDetail: function() {
+      var self = this;
       Indicator.open({
       text: '加载中...',
       spinnerType: 'snake'
     })
     setTimeout(function() {
       Indicator.close()
-      //this.$router.push({path:'/detail'})
-    },2000)
+      self.$router.push({path:'/detail'})
+    },1000)
   }
 },
   computed: {
@@ -282,7 +283,7 @@ white-space: nowrap; //文本不换行，这样超出一行的部分被截取，
 .wrap {
   -webkit-overflow-scrolling:touch;
   overflow-y: auto;
-  height: 1400px;
+  height: 1460px;
   .mint-loadmore-top,.mint-loadmore-bottom span {
     font-size: 36px;
   }

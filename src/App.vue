@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <router-view></router-view>
+  <!--
     <nav class="link">
       <ul class="mainLink">
         <li><router-link to="/">首页</router-link></li>
@@ -9,6 +10,7 @@
         <li><router-link to="/login">未登录</router-link></li>
       </ul>
     </nav>
+  -->
   </div>
 </template>
 
@@ -27,7 +29,6 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
 }
 .link {
   width: 100%;

@@ -4,11 +4,12 @@
 
   <div class="wrap" >
 
- <mt-loadmore :top-method="loadTop" :bottom-method="loadBottom" :bottom-all-loaded="allLoaded" :max-distance="150"
-                 @top-status-change="handleTopChange" ref="loadmore">
+ <mt-loadmore :top-method="loadTop" :bottom-all-loaded="allLoaded" :max-distance="350"
+  @top-status-change="handleTopChange" ref="loadmore" v-infinite-scroll="loadMore"
+  infinite-scroll-disabled="loading" infinite-scroll-distance="10">
 
         <div slot="top" class="mint-loadmore-top">
-            <span v-show="topStatus === 'pull'" :class="{ 'rotate': topStatus === 'drop' }">↓</span>
+            <span v-show="topStatus === 'pull'" :class="{ 'rotate': topStatus === 'drop' }"></span>
             <span v-show="topStatus === 'loading'">Loading...</span>
             <span v-show="topStatus === 'drop'">释放刷新</span>
         </div>
@@ -61,9 +62,6 @@
         </div>
       </a>
     </section>
-    <div slot="bottom" class="mint-loadmore-bottom">
-      <span v-show="topStatus !== 'loading'" :class="{ 'rotate': topStatus === 'drop' }">加载更多</span>
-    </div>
     </mt-loadmore>
     </div>
 
@@ -72,6 +70,8 @@
 <script>
 import Vue from 'vue'
 import { Loadmore } from 'mint-ui';
+import { InfiniteScroll } from 'mint-ui';
+Vue.use(InfiniteScroll);
 Vue.component(Loadmore.name, Loadmore);
 import { Indicator } from 'mint-ui';
 
@@ -237,7 +237,21 @@ export default {
         self.$refs.loadmore.onTopLoaded();
       }, 500);
     },
-    loadBottom: function () { // 加载更多数据的操作
+
+
+
+
+    loadMore() {
+      var self = this;
+      self.loading = true;
+      setTimeout(() => {
+        for (let i = 0; i < self.it3.length; i++) {
+          self.items.push(self.it3[i]);
+        }
+        self.loading = false;
+      }, 500);
+    },
+    /*loadBottom: function () { // 加载更多数据的操作
                 //load data
                 //this.allLoaded = true;// 若数据已全部获取完毕
       var self = this;
@@ -248,7 +262,7 @@ export default {
         }
         self.$refs.loadmore.onBottomLoaded();
       }, 500);
-    },
+    }*/
     handleTopChange: function (status) {
       this.topStatus = status;
     },

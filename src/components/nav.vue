@@ -397,9 +397,9 @@ export default {
 .a {
   //color: #f85959;
   margin: 10px 0 10px 10px;
-  height: 86px;
-  line-height: 80px;
-  font-size: 44px;
+  height: 84px;
+  line-height: 74px;
+  font-size: 42px;
   padding: 0 20px;
   display: inline-block;
 }
@@ -419,7 +419,7 @@ export default {
 .moreBtn {
   background-size: 40px;
   height: 90px;
-  width: 80px;
+  width: 90px;
   display: block;
   position: relative;
   color: #f85959;

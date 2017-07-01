@@ -402,6 +402,9 @@ export default {
   font-size: 42px;
   padding: 0 20px;
   display: inline-block;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
 }
 .more {
   float: right;

@@ -121,6 +121,9 @@ export default {
            text-decoration: none;
            color: #131313;
            text-align: center;
+          -webkit-tap-highlight-color: transparent;
+          -webkit-touch-callout: none;
+          -webkit-user-select: none;
          }
       }
     }

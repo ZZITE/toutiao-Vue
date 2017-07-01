@@ -30,7 +30,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.link {
+/*.link {
   width: 100%;
   height: 8rem;
   position: fixed;
@@ -47,9 +47,9 @@ export default {
       height: 6rem;
       line-height: 6rem;
       }
-}
+}*/
 a {
-    text-decoration:none;
+  text-decoration:none;
 }
 
 </style>

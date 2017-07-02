@@ -1,6 +1,6 @@
 <template>
 <div>
-    <nav class="fl">
+    <nav class="classify">
       <div class="more">
         <div class="shadow"></div>
         <router-link class="moreBtn" to="/menuMore">
@@ -381,85 +381,78 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
-.fl {
+.classify {
   margin-top: 8rem;
   height: 100px;
   border-bottom: 1px solid #ccc;
   background: #f4f5f6;
   box-sizing: border-box;
-}
-.menu {
-  overflow: hidden;
-  overflow-x: auto;
-  white-space: nowrap;
-  -webkit-overflow-scrolling:touch;
-}
-.a {
-  //color: #f85959;
-  margin: 10px 0 10px 10px;
-  height: 84px;
-  line-height: 74px;
-  font-size: 42px;
-  padding: 0 20px;
-  display: inline-block;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-}
-.more {
-  float: right;
-  position: relative;
-}
-.shadow {
-  left: -20px;
-  height: 90px;
-  width: 20px;
-  position: absolute;
-  background: url(./../assets/more.png);
-  background-size: contain;
-  background-color: rgba(244,245,246,.3);
-}
-.moreBtn {
-  background-size: 40px;
-  height: 90px;
-  width: 90px;
-  display: block;
-  position: relative;
-  color: #f85959;
-  text-align: center;
-}
-.cross {
-  height: 50px;
-  width: 50px;
-  position: absolute;
-  opacity: .9;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
-}
-.cross:before {
-  transform: rotate(90deg);
-}
-.cross:after, .cross:before {
-    position: absolute;
-    content: " ";
-    height: 46px;
-    width: 5px;
-    background-color: #f85959;
-}
-
-
-.tab-head li {
-  display: inline;
-  margin-right: 2rem;
-  overflow: hidden;
-}
-a {
-  font-size: 2.8rem;
-  color: #000;
-  text-decoration: none;
-}
-.active {
-  color: #f85959;
+  .menu {
+    overflow: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling:touch;
+    .a {
+      //color: #f85959;
+    margin: 10px 0 10px 10px;
+    height: 84px;
+    line-height: 74px;
+    font-size: 42px;
+    padding: 0 20px;
+    display: inline-block;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    }
+  }
+  .more {
+    float: right;
+    position: relative;
+    .shadow {
+      left: -20px;
+      height: 90px;
+      width: 20px;
+      position: absolute;
+      background: url(./../assets/more.png);
+      background-size: contain;
+      background-color: rgba(244,245,246,.3);
+    }
+    .moreBtn {
+      background-size: 40px;
+      height: 90px;
+      width: 90px;
+      display: block;
+      position: relative;
+      color: #f85959;
+      text-align: center;
+      .cross {
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        opacity: .9;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+      }
+      .cross:before {
+        transform: rotate(90deg);
+      }
+      .cross:after, .cross:before {
+          position: absolute;
+          content: " ";
+          height: 46px;
+          width: 5px;
+          background-color: #f85959;
+      }
+    }
+  }
+  a {
+    font-size: 2.8rem;
+    color: #000;
+    text-decoration: none;
+  }
+  .active {
+    color: #f85959;
+  }
 }
 </style>

@@ -24,6 +24,18 @@
       </div>
       <div class="articleContent">
         <div>
+          <p v-for="item in list" :key="item">{{item.title}}
+            <img v-lazy="item.img" v-if="item.img">
+          </p>
+        <div class="readMore">
+          <a class='bt' @click="readMore" v-show="rm">展开全文</a>
+        </div>
+        <div v-show='cs'>
+          <p v-for="itemMore in listMore" :key="itemMore">{{itemMore.title}}
+            <img v-lazy="itemMore.img" v-if="itemMore.img">
+          </p>
+        </div>
+        <!--
           <p>小奶喵卡住出不来</p>
           <p class="pimg"><img src="https://p3.pstatp.com/large/289100046793e88f5e5a" img_width="300" img_height="299" inline="0" alt="小奶喵卡住出不来，看到主人在拍摄，于是，喵：好尴尬哦，卖个萌好了" ></p>
           <p>委屈到变形哈哈</p>
@@ -46,7 +58,9 @@
           <p><img src="https://p3.pstatp.com/large/28910004679447309eba" img_width="440" img_height="440" inline="0" alt="小奶喵卡住出不来，看到主人在拍摄，于是，喵：好尴尬哦，卖个萌好了"></p>
           <p><img src="https://p3.pstatp.com/large/289400045c67364af8d5" img_width="440" img_height="440" inline="0" alt="小奶喵卡住出不来，看到主人在拍摄，于是，喵：好尴尬哦，卖个萌好了"></p>
           <p>图自/微博/@设计系奶子</p>
+          
           </div>
+          -->
         </div>
       </div>
     </article>
@@ -54,10 +68,68 @@
 </template>
 
 <script>
+import Vue from 'vue'
+import { Lazyload } from 'mint-ui';
+Vue.use(Lazyload);
 export default {
   name: 'detail',
   data () {
     return {
+      list: [
+        {
+          title: '小奶喵卡住出不来'
+        },
+        {
+          img: 'https://p3.pstatp.com/large/289100046793e88f5e5a'
+        },
+        {
+          title: '喵：出不来了，怎么办，好气哦'
+        },
+        {
+          img: 'https://p3.pstatp.com/large/28900004face553ab585'
+        }],
+      listMore: [
+        {
+          title: '萌出血了'
+        },
+        {
+          img: 'https://p3.pstatp.com/large/28920000dd2b2bc4dc8b'
+        },
+        {
+          title: '看到主人在拍摄，于是...'
+        },
+        {
+          title: '喵：好尴尬哦，卖个萌好了'
+        },
+        {
+          img: 'https://p3.pstatp.com/large/2897000259bf34c632da'
+        },
+        {
+          title: '翻了下po主的INS'
+        },
+        {
+          title: '感受下这枚新萌猫'
+        },
+        {
+          img: 'https://p3.pstatp.com/large/2893000461dab23851c4'
+        },
+        {
+          img: 'https://p3.pstatp.com/large/28920000dd2a075e8905'
+        },
+        {
+          title: '这是一斤？'
+        },
+        {
+          img: 'https://p3.pstatp.com/large/28910004679447309eba'
+        },
+        {
+          img: 'https://p3.pstatp.com/large/289400045c67364af8d5'
+        },
+        {
+          title: '图自/微博/@设计系奶子'
+        }
+      ],
+
       cs: false,
       rm: true
     }
@@ -185,7 +257,7 @@ export default {
       display: inline-block;
       cursor: pointer;
       font-size: 40px;
-      line-height: 60px;
+      line-height: 200px;
       border-radius: 29px;
       color: #406599;
     }
@@ -201,5 +273,10 @@ export default {
     }
   }
   }
+  image[lazy=loading] {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+}
 }
 </style>

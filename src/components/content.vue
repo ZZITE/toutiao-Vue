@@ -1,19 +1,13 @@
 <template>
-
-
-
   <div class="wrap" >
-
- <mt-loadmore :top-method="loadTop" :bottom-all-loaded="allLoaded" :max-distance="350"
-  @top-status-change="handleTopChange" ref="loadmore" v-infinite-scroll="loadMore"
-  infinite-scroll-disabled="loading" infinite-scroll-distance="10">
-
-        <div slot="top" class="mint-loadmore-top">
-            <span v-show="topStatus === 'pull'" :class="{ 'rotate': topStatus === 'drop' }"></span>
-            <span v-show="topStatus === 'loading'">Loading...</span>
-            <span v-show="topStatus === 'drop'">释放刷新</span>
-        </div>
-
+   <mt-loadmore :top-method="loadTop" :bottom-all-loaded="allLoaded" :max-distance="350"
+    @top-status-change="handleTopChange" ref="loadmore" v-infinite-scroll="loadMore"
+    infinite-scroll-disabled="loading" infinite-scroll-distance="10">
+      <div slot="top" class="mint-loadmore-top">
+        <span v-show="topStatus === 'pull'" :class="{ 'rotate': topStatus === 'drop' }"></span>
+        <span v-show="topStatus === 'loading'">Loading...</span>
+        <span v-show="topStatus === 'drop'">释放刷新</span>
+      </div>
     <section v-for="item of items" :key="item">
       <!--左侧标题，右侧单图-->
       <a class="articleLink" v-if="item.zy" @click="toDetail">
@@ -269,7 +263,7 @@ export default {
     toDetail: function() {
       var self = this;
       Indicator.open({
-      text: '加载中...',
+      text: '',
       spinnerType: 'snake'
     })
     setTimeout(function() {

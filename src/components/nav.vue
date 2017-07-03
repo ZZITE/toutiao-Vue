@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="wrap">
     <nav class="classify">
       <div class="more">
         <div class="shadow"></div>
@@ -381,6 +381,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
+.wrap {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+}
 .classify {
   margin-top: 8rem;
   height: 100px;

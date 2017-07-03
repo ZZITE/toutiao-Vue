@@ -289,11 +289,13 @@ text-overflow: ellipsis;
 white-space: nowrap; //文本不换行，这样超出一行的部分被截取，显示...
 }*/
 .wrap {
+  position: fixed;
+  margin-top: 14rem;
   -webkit-overflow-scrolling:touch;
   overflow-y: auto;
   height: 1460px;
   .mint-loadmore-top,.mint-loadmore-bottom span {
-    font-size: 36px;
+  font-size: 36px;
   }
 
 .articleLink {
@@ -338,7 +340,7 @@ white-space: nowrap; //文本不换行，这样超出一行的部分被截取，
   .itemImage3 {
     display: inline-block;
     vertical-align: middle;
-    width: 84%;
+    width: 100%;
     img {
     border: none;
     display: block;

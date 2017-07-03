@@ -64,6 +64,10 @@
         </div>
       </div>
     </article>
+    <div class="bottom">
+      <textarea ></textarea>
+
+    </div>
   </div>
 </template>
 
@@ -278,5 +282,24 @@ export default {
   height: 300px;
   margin: auto;
 }
+}
+.bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #fff;
+  border-top: 1px solid #999;
+  textarea {
+    font-size: 36px;
+    line-height:60px;
+    height: 70px;
+    width: 60%;
+    color: #404040;
+    background-color: #f2f2f2;
+    margin: 15px 0 15px 20px;
+    border-radius: 40px;
+    text-align: center;
+  }
 }
 </style>

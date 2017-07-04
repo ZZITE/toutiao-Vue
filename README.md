@@ -4,7 +4,9 @@
 
 
 
-### 简介👻
+
+
+## 简介👻
 
 * 还说什么呢，就是这样了呀。
 * 主要功能：页面切换|拉动刷新加载|频道增删|
@@ -13,9 +15,14 @@
 
 
 
-### 效果
+
+
+
+## 效果预览
 
 ![](static/预览1.png) 
+
+
 
 
 
@@ -25,13 +32,27 @@
 
 
 
+
+
 ![](static/预览3.png) 
+
+
+
+
 
 
 
 #### 手机浏览器扫描二维码查看DEMO 🚀 
 
-![手机浏览器扫描二维码查看DEMO](static/二维码.png)
+
+
+
+
+![DEMO](static/二维码.png)
+
+
+
+
 
 
 
@@ -46,7 +67,6 @@ npm run dev
 
 # build for production with minification
 npm run build
-
 ```
 
 

@@ -290,26 +290,26 @@ white-space: nowrap; //文本不换行，这样超出一行的部分被截取，
 }*/
 .wrap {
   position: fixed;
-  margin-top: 14rem;
+  margin-top: 84px;
   -webkit-overflow-scrolling:touch;
   overflow-y: auto;
   height: 1460px;
   .mint-loadmore-top,.mint-loadmore-bottom span {
-  font-size: 36px;
+  font-size: 16px;
   }
 
 .articleLink {
-  min-height: 84px;
-  padding: 28px 20px 0 ;
+  min-height: 40px;
+  padding: 14px 4px 0 ;
   display: block;
   position: relative;
 
   .itemDetail {
     border-bottom: 1px solid #ccc;
-    margin: 0 20px;
+    margin: 0 10px;
       p {
-      line-height: 60px;
-      font-size: 42px;
+      line-height: 24px;
+      font-size: 18px;
       text-align: left;
       max-height: 100%; 
       color: #222;
@@ -323,14 +323,14 @@ white-space: nowrap; //文本不换行，这样超出一行的部分被截取，
     width: 64%;
     display: inline-block;
     vertical-align: middle;
-    margin-right:14px;
+    margin-right:4px;
   }
   .itemImage2 {
     overflow: hidden;
     width: 33%;
     display: inline-block;
     vertical-align: middle;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     img {
     border: none;
     display: block;
@@ -354,12 +354,12 @@ white-space: nowrap; //文本不换行，这样超出一行的部分被截取，
     font-size: 0;
     text-align: center;
     .listImage {
-    padding-right: 4px;
+    padding-right: 2px;
     display: inline-block;
     overflow: hidden;
     width: 33.3%;
     box-sizing: border-box;
-    height: 220px;
+    height: 80px;
     position: relative;
       img {
         border: none;
@@ -369,14 +369,14 @@ white-space: nowrap; //文本不换行，这样超出一行的部分被截取，
     }
   }
   .itemMes {
-    padding: 24px 0 ;
-    height: 28px;
+    padding: 12px 0 ;
+    height: 14px;
     span {
-      padding-right: 20px;
-      line-height: 20px;
+      padding-right: 6px;
+      line-height: 12px;
       float: left;
       color: #999;
-      font-size: 26px;
+      font-size: 10px;
       }
     }
   }

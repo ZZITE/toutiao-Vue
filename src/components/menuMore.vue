@@ -53,7 +53,7 @@ export default {
 .wrap {
   .head {
     width: 100%;
-    height: 130px;
+    height: 50px;
     position: relative;
     background-color: #d43d3d;
     a {
@@ -64,30 +64,30 @@ export default {
     .title {
       display: block;
       text-align: center;
-      line-height: 121px;
+      line-height: 50px;
       font-weight: 700;
       .titleA {
-        font-size: 42px;
+        font-size: 16px;
       }
     }
     .back {
-      width: 110px;
-      height: 130px;
+      width: 40px;
+      height: 40px;
       position: absolute;
       left: 0;
-      top: 0;
+      top: 4px;
       display: flex;
       align-items: center;
       cursor: pointer;
       text-align: center;
-      line-height: 50px;
+      line-height: 40px;
       font-weight: 700;
         .backBtn {
           width: 50%;
           height: 50%;
           background: url(./../assets/headerBack.png) no-repeat 50%;
           background-size: 100%;
-          margin-left: 26px;
+          margin-left: 12px;
         }
     }
   }
@@ -96,10 +96,10 @@ export default {
     font-weight: 500;
     span {
       display: block;
-      padding: 0 10px;
-      line-height: 2em;
+      padding: 4px 10px;
+      line-height: 20px;
       background-color: #f5f5f5;
-      font-size: 34px;
+      font-size: 16px;
       color: #666;
       text-align: left;
     }
@@ -109,16 +109,15 @@ export default {
       li {
          display: inline-block;
          width: 25%;
-         margin-bottom: 24px;
+         margin-bottom: 14px;
          animation: zoomIn .3s ease;
 
          a {
-           font-size: 42px;
+           font-size: 16px;
            display: block;
-           margin: 0 20px;
-           border: 1px solid #999;
+           margin: 0 8px;
+           border: 1px solid #ccc;
            line-height: 2em;
-           text-decoration: none;
            color: #131313;
            text-align: center;
           -webkit-tap-highlight-color: transparent;

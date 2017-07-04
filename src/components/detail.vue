@@ -15,9 +15,9 @@
               <span>大爱猫咪控</span>
               <img src="https://s3b.pstatp.com/growth/mobile_detail/image/toutiaohao_tag_bc28ef080879ea46945f90a280f66c28.svg">  
             </p>
-            <div class="sp">
+            <a class="sp">
               <span>06-20 11:54</span>
-            </div>          
+            </a>          
           </div>
           <a  class="a" href="javascript: void(0)">关注</a>
         </div>
@@ -150,16 +150,17 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
 .article {
-  padding: 50px 40px 0  40px;
+  padding: 10px 14px 0  14px;
   margin-top: 12px;
-  line-height: 94px;
+  line-height: 34px;
   position: relative;
   overflow: hidden;
   background-color: #fff;
   .articleHead {
     position: relative;
     h1 {
-      font-size: 64px;
+      font-size: 24px;
+      line-height: 34px;
       text-align: left;
     }
     .articleAuthor {
@@ -170,14 +171,14 @@ export default {
       a {
         color: #131313;
         .image {
-          height: 100px;
-          width: 100px;
+          height: 36px;
+          width: 36px;
           border: none;
           position: relative;
           img {
             width: 100%;
             height: 100%;
-            border-radius: 48px;
+            border-radius: 32px;
             position: absolute;
             top: 0;
             left: 0;
@@ -188,33 +189,34 @@ export default {
         }
       }
         .authorInfo {
-          padding-left: 20px;
-          -webkit-box-flex: 2;
+          padding-left: 8px;
+          -webkit-box-flex: 1;
           -ms-flex-positive: 1;
           flex-grow: 1;
           p {
-            text-align: left;
-            line-height: 10px;
-            font-size: 16px;
-            margin-bottom: 0;
+            
+            line-height: 16px;
+            font-size: 12px;
+            margin-bottom: 2px;
             span {
               font-family: PingFangSC-Medium;
-              font-size: 36px;
-              line-height: 50px;
+              font-size: 14px;
+              line-height: 16px;
               color: #222121;
             }
             img {
               padding-left: 5px;
-              height: 48px;
-              margin-bottom: -3px;
+              height: 16px;
+              margin-bottom: 0px;
             }
           }
           .sp {
-            height: 60px;
+            height: 30px;
             span {
-              font-size: 28px;
+              font-size: 12px;
               line-height: 12px;
-              text-align: left;
+              vertical-align: middle;
+              display: inline-block;
               color: #999;
             }
           }
@@ -226,12 +228,12 @@ export default {
           color: hsla(0,0%,100%,.96);
           -webkit-box-sizing: border-box;
           box-sizing: border-box;
-          width: 180px;
-          height: 70px;
-          line-height: 68px;
-          font-size: 36px;
-          margin-top: 40px;
-          border-radius: 16px;
+          width: 72px;
+          height: 29px;
+          line-height: 29px;
+          font-size: 14px;
+          margin-top: 16px;
+          border-radius: 6px;
         }
       }   
   }
@@ -244,8 +246,8 @@ export default {
     p {
       word-wrap: break-word;
       color: #333;
-      margin-top: 80px;
-      font-size: 48px;
+      margin-top: 24px;
+      font-size: 18px;
       line-height: 30px;
       img {
         width: 100%;
@@ -256,12 +258,13 @@ export default {
   .readMore {
      text-align: center;
      position: relative;
-     padding: 12px 0;
+     padding: 10px 0;
+     height: 50px;
     .bt {
       display: inline-block;
       cursor: pointer;
-      font-size: 40px;
-      line-height: 200px;
+      font-size: 16px;
+      line-height: 30px;
       border-radius: 29px;
       color: #406599;
     }
@@ -270,8 +273,8 @@ export default {
       background-image: url(./../assets/readMore.png);
       background-size: contain;
       background-repeat: no-repeat;
-      width: 30px;
-      height: 24px;
+      width: 18px;
+      height: 12px;
       display: inline-block;
       margin-left: 16px;
     }
@@ -287,18 +290,18 @@ export default {
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 100px;
+  height: 40px;
   background-color: #fff;
   border-top: 1px solid #999;
   textarea {
-    font-size: 36px;
-    line-height:60px;
-    height: 70px;
+    font-size: 16px;
+    line-height:20px;
+    height: 30px;
     width: 60%;
     color: #404040;
     background-color: #f2f2f2;
-    margin: 15px 0 15px 20px;
-    border-radius: 40px;
+    margin: 6px 0 6px 12px;
+    border-radius: 24px;
     text-align: center;
   }
 }

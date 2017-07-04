@@ -382,13 +382,13 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
 .wrap {
+  margin-top: 48px;
   position: fixed;
   width: 100%;
-  height: 100px;
+  height: 36px;
 }
 .classify {
-  margin-top: 8rem;
-  height: 100px;
+  height: 36px;
   border-bottom: 1px solid #ccc;
   background: #f4f5f6;
   box-sizing: border-box;
@@ -399,11 +399,11 @@ export default {
     -webkit-overflow-scrolling:touch;
     .a {
       //color: #f85959;
-    margin: 10px 0 10px 10px;
-    height: 84px;
-    line-height: 74px;
-    font-size: 42px;
-    padding: 0 20px;
+    margin: 0 0 3px 20px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 16px;
+
     display: inline-block;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
@@ -414,25 +414,25 @@ export default {
     float: right;
     position: relative;
     .shadow {
-      left: -20px;
-      height: 90px;
-      width: 20px;
+      left: 0px;
+      height: 36px;
+      width: 8px;
       position: absolute;
       background: url(./../assets/more.png);
       background-size: contain;
       background-color: rgba(244,245,246,.3);
     }
     .moreBtn {
-      background-size: 40px;
-      height: 90px;
-      width: 90px;
+      background-size: 10px;
+      height: 36px;
+      width: 38px;
       display: block;
       position: relative;
       color: #f85959;
       text-align: center;
       .cross {
-        height: 50px;
-        width: 50px;
+        height: 20px;
+        width: 20px;
         position: absolute;
         opacity: .9;
         left: 50%;
@@ -445,8 +445,8 @@ export default {
       .cross:after, .cross:before {
           position: absolute;
           content: " ";
-          height: 46px;
-          width: 5px;
+          height: 18px;
+          width: 2px;
           background-color: #f85959;
       }
     }

@@ -389,7 +389,6 @@ export default {
 }
 .classify {
   height: 36px;
-  border-bottom: 1px solid #ccc;
   background: #f4f5f6;
   box-sizing: border-box;
   .menu {
@@ -403,6 +402,7 @@ export default {
     height: 36px;
     line-height: 36px;
     font-size: 16px;
+    color: #505050;
 
     display: inline-block;
     -webkit-tap-highlight-color: transparent;

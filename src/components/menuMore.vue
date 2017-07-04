@@ -67,7 +67,7 @@ export default {
       line-height: 50px;
       font-weight: 700;
       .titleA {
-        font-size: 16px;
+        font-size: 18px;
       }
     }
     .back {

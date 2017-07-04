@@ -293,14 +293,14 @@ white-space: nowrap; //文本不换行，这样超出一行的部分被截取，
   margin-top: 84px;
   -webkit-overflow-scrolling:touch;
   overflow-y: auto;
-  height: 1460px;
+  height: 700px;
   .mint-loadmore-top,.mint-loadmore-bottom span {
   font-size: 16px;
   }
 
 .articleLink {
   min-height: 40px;
-  padding: 14px 4px 0 ;
+  padding: 12px 4px 0 ;
   display: block;
   position: relative;
 
@@ -309,7 +309,7 @@ white-space: nowrap; //文本不换行，这样超出一行的部分被截取，
     margin: 0 10px;
       p {
       line-height: 24px;
-      font-size: 18px;
+      font-size: 16px;
       text-align: left;
       max-height: 100%; 
       color: #222;

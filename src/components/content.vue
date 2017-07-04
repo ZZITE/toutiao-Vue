@@ -293,7 +293,7 @@ white-space: nowrap; //文本不换行，这样超出一行的部分被截取，
   margin-top: 84px;
   -webkit-overflow-scrolling:touch;
   overflow-y: auto;
-  height: 700px;
+  height: 100%;
   .mint-loadmore-top,.mint-loadmore-bottom span {
   font-size: 16px;
   }
@@ -376,7 +376,7 @@ white-space: nowrap; //文本不换行，这样超出一行的部分被截取，
       line-height: 12px;
       float: left;
       color: #999;
-      font-size: 10px;
+      font-size: 8px;
       }
     }
   }

@@ -398,9 +398,9 @@ export default {
     -webkit-overflow-scrolling:touch;
     .a {
       //color: #f85959;
-    margin: 0 0 3px 20px;
+    margin: 0 0 4px 20px;
     height: 36px;
-    line-height: 36px;
+    line-height: 32px;
     font-size: 16px;
     color: #505050;
 
@@ -457,7 +457,7 @@ export default {
     text-decoration: none;
   }
   .active {
-    color: #f85959;
+    color: #f85959 !important;
   }
 }
 </style>

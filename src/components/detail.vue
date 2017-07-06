@@ -64,10 +64,12 @@
         </div>
       </div>
     </article>
+    <!--
     <div class="bottom">
       <textarea ></textarea>
 
     </div>
+    -->
   </div>
 </template>
 
